@@ -1,0 +1,48 @@
+# See https://help.github.com/ignore-files/ for more about ignoring files.
+
+# imported generated code
+src/mower/commands/*
+!src/mower/commands/base
+!src/mower/commands/link
+
+# generated code
+/lib
+
+# dependencies
+node_modules
+/styleguide
+
+# compiled output
+/dist/
+/tmp/
+
+# dependencies
+/bower_components/
+/node_modules/
+
+# misc
+/.env*
+/.pnp*
+/.sass-cache
+/.eslintcache
+/connect.lock
+/coverage/
+/libpeerconnection.log
+/test-reports
+npm-debug.log*
+testem.log
+.ackrc
+coverage.json
+lcov.dat
+testresults.log
+.idea/sonarlint/issuestore/
+.eslintcache
+
+# OS X
+.DS_Store
+
+# Covers JetBrains IDEs
+.idea/
+
+# NPM
+.npmrc
