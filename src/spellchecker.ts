@@ -187,6 +187,31 @@ export default class Spellchecker {
     this.editorView.dispatch(tr);
   }
 
+  public findChangedTextNodes(node: Node, pos: number, from: number, to: number) {
+    if (!node.isBlock) {
+      return false;
+    }
+
+    if (!node.isTextblock) {
+      node.descendants((nde, ps) => {
+        this.findChangedTextNodes(nde, ps, from, to);
+      });
+      return false;
+    }
+
+    const [nodeFrom, nodeTo] = [pos, pos + node.nodeSize];
+    if (!(nodeFrom <= from && to <= nodeTo)) {
+      return;
+    }
+
+    const changedNodeWithPos = { node, pos };
+    this.onNodeChanged(
+      changedNodeWithPos.node,
+      changedNodeWithPos.node.textContent,
+      changedNodeWithPos.pos + 1,
+    );
+  }
+
   public onNodeChanged (node: Node, text: string, originalFrom: number) {
     if (originalFrom !== this.lastOriginalFrom) {
       this.getMatchAndSetDecorations(node, text, originalFrom);

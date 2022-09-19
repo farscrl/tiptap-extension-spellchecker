@@ -108,29 +108,10 @@ export const SpellcheckerExtension = Extension.create<ISpellcheckerOptions, ISpe
                   selection: { from, to },
                 } = transaction;
 
-                let changedNodeWithPos: { node: Node; pos: number };
-
                 transaction.doc.descendants((node, pos) => {
-                  if (!node.isBlock) {
-                    return false;
-                  }
-
-                  const [nodeFrom, nodeTo] = [pos, pos + node.nodeSize];
-                  if (!(nodeFrom <= from && to <= nodeTo)) {
-                    return;
-                  }
-
-                  changedNodeWithPos = { node, pos };
+                  spellchecker.findChangedTextNodes(node, pos, from, to);
                 });
-
-                if (changedNodeWithPos!) {
-                  spellchecker.onNodeChanged(
-                    changedNodeWithPos.node,
-                    changedNodeWithPos.node.textContent,
-                    changedNodeWithPos.pos + 1,
-                  );
-                }
-              }              
+              }
             }
 
             spellchecker.setDecorationSet(spellchecker.getDecorationSet().map(transaction.mapping, transaction.doc));
