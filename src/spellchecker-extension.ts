@@ -101,9 +101,9 @@ export const SpellcheckerExtension = Extension.create<ISpellcheckerOptions, ISpe
               if (that.storage.didPaste) {
                 that.storage.didPaste = false;
                 spellchecker.debouncedProofreadDoc(transaction.doc);
-              } else if (!spellchecker.completeProofreadingDone) {
+              } else /*if (!spellchecker.completeProofreadingDone)*/ {
                 spellchecker.debouncedProofreadDoc(transaction.doc);
-              } else {
+              } /*else {
                 const {
                   selection: { from, to },
                 } = transaction;
@@ -111,10 +111,10 @@ export const SpellcheckerExtension = Extension.create<ISpellcheckerOptions, ISpe
                 transaction.doc.descendants((node, pos) => {
                   spellchecker.findChangedTextNodes(node, pos, from, to);
                 });
-              }
+              }*/
             }
 
-            spellchecker.setDecorationSet(spellchecker.getDecorationSet().map(transaction.mapping, transaction.doc));
+            //spellchecker.setDecorationSet(spellchecker.getDecorationSet().map(transaction.mapping, transaction.doc));
             setTimeout(spellchecker.addEventListenersToDecorations, 100);
             return spellchecker.getDecorationSet();
           }
