@@ -130,7 +130,7 @@ export default class Spellchecker {
     this.isInitialProofreadingDone = true;
   }
 
-  public async getMatchAndSetDecorations (doc: Node, text: string, originalFrom: number) {
+  public async getMatchAndSetDecorations (node: Node, text: string, originalFrom: number) {
     const matches = await this.proofreader.proofreadText(this.proofreader.normalizeTextForLanguage(text));
 
     const decorations: Decoration[] = [];
@@ -147,7 +147,7 @@ export default class Spellchecker {
   
     const decorationsToRemove = this.decorationSet.find(originalFrom, originalFrom + text.length);
     this.decorationSet = this.decorationSet.remove(decorationsToRemove);
-    this.decorationSet = this.decorationSet.add(doc, decorations);
+    this.decorationSet = this.decorationSet.add(node, decorations);
   
     if (this.editorView) {
       this.dispatch(this.editorView.state.tr.setMeta(SPELLCHECKER_TRANSACTION, true));
@@ -187,11 +187,11 @@ export default class Spellchecker {
     this.editorView.dispatch(tr);
   }
 
-  public onNodeChanged (doc: Node, text: string, originalFrom: number) {
+  public onNodeChanged (node: Node, text: string, originalFrom: number) {
     if (originalFrom !== this.lastOriginalFrom) {
-      this.getMatchAndSetDecorations(doc, text, originalFrom);
+      this.getMatchAndSetDecorations(node, text, originalFrom);
     } else {
-      this.debouncedGetMatchAndSetDecorations(doc, text, originalFrom);
+      this.debouncedGetMatchAndSetDecorations(node, text, originalFrom);
     }
   
     this.lastOriginalFrom = originalFrom;
