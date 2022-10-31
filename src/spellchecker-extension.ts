@@ -16,6 +16,7 @@ export interface IUiStrings {
 export interface ISpellcheckerOptions {
   proofreader?: IProofreaderInterface,
   uiStrings?: IUiStrings;
+  onShowSuggestionsEvent?: (word: string) => void;
 }
 
 interface ISpellcheckerStorage {
@@ -83,7 +84,7 @@ export const SpellcheckerExtension = Extension.create<ISpellcheckerOptions, ISpe
         },
         state: {
           init(config, instance) {
-            const spellchecker = new Spellchecker(that.options.proofreader!, that.options.uiStrings);
+            const spellchecker = new Spellchecker(that.options.proofreader!, that.options.uiStrings, that.options.onShowSuggestionsEvent);
             that.storage.spellchecker = spellchecker;
             spellchecker.setDecorationSet(DecorationSet.create(instance.doc, []));
 

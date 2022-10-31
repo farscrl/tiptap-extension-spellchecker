@@ -23,6 +23,7 @@ export default class Spellchecker {
 
   private proofreader: IProofreaderInterface;
   private uiStrings?: IUiStrings;
+  private showSuggestionsEvent?: (word: string) => void;
   private decorationSet: DecorationSet;
   private editorView?: EditorView;
 
@@ -31,9 +32,10 @@ export default class Spellchecker {
 
   private readonly suggestionBox;
 
-  constructor(proofreader: IProofreaderInterface, uiStrings?: IUiStrings ) {
+  constructor(proofreader: IProofreaderInterface, uiStrings?: IUiStrings, showSuggestionsEvent?: (word: string) => void) {
     this.proofreader = proofreader;
     this.uiStrings = uiStrings;
+    this.showSuggestionsEvent = showSuggestionsEvent;
     this.decorationSet = DecorationSet.empty;
 
     this.suggestionBox = document.createElement('div');
@@ -257,6 +259,9 @@ export default class Spellchecker {
       this.suggestionBox.style.top = (start.bottom + 5 + window.scrollY) + 'px';
 
       this.suggestionBox.focus();
+      if (this.showSuggestionsEvent) {
+        this.showSuggestionsEvent(this.proofreader.normalizeTextForLanguage(match.word));
+      }
     }
 
     this.addEventListenersToSuggestionBox();
