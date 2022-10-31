@@ -39,7 +39,7 @@ export default class Spellchecker {
     this.decorationSet = DecorationSet.empty;
 
     this.suggestionBox = document.createElement('div');
-    this.suggestionBox.className = 'suggestions-box';
+    this.suggestionBox.id = 'suggestions-box';
     this.suggestionBox.tabIndex = 0;
     this.hideSuggestionBox();
   }
