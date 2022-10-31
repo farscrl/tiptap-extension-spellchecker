@@ -258,7 +258,6 @@ export default class Spellchecker {
       this.suggestionBox.style.left = (left - box.left) + 'px';
       this.suggestionBox.style.top = (start.bottom + 5 + window.scrollY) + 'px';
 
-      this.suggestionBox.focus();
       if (this.showSuggestionsEvent) {
         this.showSuggestionsEvent(this.proofreader.normalizeTextForLanguage(match.word));
       }
