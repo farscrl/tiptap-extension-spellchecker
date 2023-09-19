@@ -4,6 +4,7 @@ import { Plugin, PluginKey } from 'prosemirror-state';
 import { DecorationSet } from 'prosemirror-view';
 import { IProofreaderInterface } from './i-proofreader-interface';
 import Spellchecker from './spellchecker';
+import { selectAll } from 'prosemirror-commands';
 
 // transactions caused by the spellchecker are marked with this metadata
 export const SPELLCHECKER_TRANSACTION = 'spellchecker-transation';
@@ -59,6 +60,14 @@ export const SpellcheckerExtension = Extension.create<ISpellcheckerOptions, ISpe
         this.storage.spellchecker!.proofreadDoc(tr.doc);
         return true;
       },
+      selectAll: () => ({ state, dispatch }) => {
+        selectAll(state, dispatch);
+        return true;
+      },
+      copy: () => () => {
+        document.execCommand('copy');
+        return true;
+      }
     };
   },
 

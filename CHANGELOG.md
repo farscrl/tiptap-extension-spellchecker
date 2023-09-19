@@ -1,6 +1,13 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [1.0.4] - 2023-09-19
+- update tiptap
+- add commands to selectAll, copy
+- 
+## [1.0.4]
+- not published
+
 ## [1.0.2] - 2022-10-31
 - Add event when suggestions box is shown
 - Do not autofocus suggestions box
