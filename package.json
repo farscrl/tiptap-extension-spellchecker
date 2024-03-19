@@ -26,8 +26,8 @@
   "homepage": "https://github.com/farscrl/tiptap-extension-spellchecker#readme",
   "devDependencies": {
     "@types/jest": "^29.5.5",
-    "@typescript-eslint/eslint-plugin": "^6.7.2",
-    "@typescript-eslint/parser": "^6.7.2",
+    "@typescript-eslint/eslint-plugin": "^7.3.1",
+    "@typescript-eslint/parser": "^7.3.1",
     "eslint": "^8.22.0",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
