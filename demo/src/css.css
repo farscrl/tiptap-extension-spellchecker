@@ -1,0 +1,22 @@
+#suggestions-box {
+    position: absolute;
+    border: 1px solid black;
+    background-color: #f7f7f7;
+    border-radius: 4px;
+}
+#suggestions-box ul {
+    padding: 2px 4px;
+    margin: 0;
+    display: inline-block;
+}
+
+#suggestions-box li {
+    cursor: pointer;
+    list-style: none;
+    color: var(--pico-primary-background);
+}
+#suggestions-box li:before {
+    content: "→";
+    color: #848484;
+    padding-right: 5px;
+}
