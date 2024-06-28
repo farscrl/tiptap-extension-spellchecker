@@ -1,10 +1,17 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [1.0.6] - 2024-06-28
+- update dependencies
+- add demo implementations
+
+## [1.0.5] - 2024-03-19
+- update dependencies
+
 ## [1.0.4] - 2023-09-19
 - update tiptap
 - add commands to selectAll, copy
-- 
+
 ## [1.0.4]
 - not published
 

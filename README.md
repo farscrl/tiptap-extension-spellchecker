@@ -31,6 +31,9 @@ new Editor({
 
 The uiStrings object contains strings used for the minimal UI of the extension. If you don't provide that object, default strings are used. 
 
+# Demo
+Some demo implementations are available in the `demo` folder. To run them, clone the repository, install the dependencies and run the demo.
+
 # Credits
 
 This extension is inspired by the [tiptap-languagetool](https://github.com/sereneinserenade/tiptap-languagetool) extension. 
