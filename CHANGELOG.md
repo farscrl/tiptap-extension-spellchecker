@@ -1,6 +1,9 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [1.0.7] - 2025-02-18
+- update dependencies
+
 ## [1.0.6] - 2024-06-28
 - update dependencies
 - add demo implementations
