@@ -13,19 +13,19 @@
   "devDependencies": {
     "clean-webpack-plugin": "^4.0.0",
     "css-loader": "^7.1.2",
-    "html-webpack-plugin": "^5.6.0",
+    "html-webpack-plugin": "^5.6.3",
     "style-loader": "^4.0.0",
-    "ts-loader": "^9.5.1",
-    "typescript": "^5.5.2",
-    "webpack": "^5.92.1",
+    "ts-loader": "^9.5.2",
+    "typescript": "^5.7.3",
+    "webpack": "^5.98.0",
     "webpack-cli": "^5.1.4",
-    "webpack-dev-server": "^5.0.4"
+    "webpack-dev-server": "^5.2.0"
   },
   "dependencies": {
-    "@farscrl/tiptap-extension-spellchecker": "^1.0.6",
-    "@tiptap/core": "^2.4.0",
-    "@tiptap/pm": "^2.4.0",
-    "@tiptap/starter-kit": "^2.4.0",
+    "@farscrl/tiptap-extension-spellchecker": "^1.0.7",
+    "@tiptap/core": "^2.11.5",
+    "@tiptap/pm": "^2.11.5",
+    "@tiptap/starter-kit": "^2.11.5",
     "hunspell-asm": "^4.0.2"
   }
 }
