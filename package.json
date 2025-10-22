@@ -8,11 +8,11 @@
     "lib/**/*"
   ],
   "scripts": {
-    "test": "jest --config=jest.config.ts --coverage",
+    "test": "jest --config=jest.config.ts --coverage --passWithNoTests",
     "build": "tsc",
     "format": "prettier --write \"src/**/*.ts\"",
     "lint": "eslint -c .eslintrc.json",
-    "prepare": "npm run build"
+    "prepare": "pnpm run build"
   },
   "repository": {
     "type": "git",
@@ -25,6 +25,7 @@
   },
   "homepage": "https://github.com/farscrl/tiptap-extension-spellchecker#readme",
   "devDependencies": {
+    "@jest/types": "^30.2.0",
     "@types/jest": "^29.5.14",
     "@typescript-eslint/eslint-plugin": "^8.24.1",
     "@typescript-eslint/parser": "^8.24.1",

@@ -43,6 +43,3 @@ testresults.log
 
 # Covers JetBrains IDEs
 .idea/
-
-# NPM
-.npmrc
