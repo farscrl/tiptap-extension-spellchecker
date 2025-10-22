@@ -1,6 +1,11 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [2.0.0] - 2025-10-22
+- Update to TipTap 3
+- Update dependencies
+- Update demo to TipTap 3
+
 ## [1.0.7] - 2025-02-18
 - update dependencies
 

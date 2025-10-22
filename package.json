@@ -1,6 +1,6 @@
 {
   "name": "@farscrl/tiptap-extension-spellchecker",
-  "version": "1.0.7",
+  "version": "2.0.0",
   "description": "A spellchecker extension for the TipTap editor",
   "main": "lib/index.js",
   "types": "lib/index.d.ts",
