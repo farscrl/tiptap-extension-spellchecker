@@ -18,14 +18,14 @@
     "ts-loader": "^9.5.2",
     "typescript": "^5.7.3",
     "webpack": "^5.98.0",
-    "webpack-cli": "^5.1.4",
+    "webpack-cli": "^6.0.1",
     "webpack-dev-server": "^5.2.0"
   },
   "dependencies": {
-    "@farscrl/tiptap-extension-spellchecker": "^1.0.7",
-    "@tiptap/core": "^2.11.5",
-    "@tiptap/pm": "^2.11.5",
-    "@tiptap/starter-kit": "^2.11.5",
+    "@farscrl/tiptap-extension-spellchecker": "link:..",
+    "@tiptap/core": "^3.7.2",
+    "@tiptap/pm": "^3.7.2",
+    "@tiptap/starter-kit": "^3.7.2",
     "hunspell-asm": "^4.0.2"
   }
 }
