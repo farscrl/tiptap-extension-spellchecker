@@ -12,6 +12,9 @@ importers:
         specifier: ^2.11.5
         version: 2.26.3(@tiptap/pm@2.26.3)
     devDependencies:
+      '@eslint/js':
+        specifier: ^9.38.0
+        version: 9.38.0
       '@jest/types':
         specifier: ^30.2.0
         version: 30.2.0
@@ -27,6 +30,9 @@ importers:
       eslint:
         specifier: ^9.20.1
         version: 9.38.0
+      globals:
+        specifier: ^16.4.0
+        version: 16.4.0
       jest:
         specifier: ^29.7.0
         version: 29.7.0(@types/node@24.9.1)(ts-node@10.9.2(@types/node@24.9.1)(typescript@5.9.3))
@@ -1011,6 +1017,10 @@ packages:
 
   globals@14.0.0:
     resolution: {integrity: sha512-oahGvuMGQlPw/ivIYBjVSrWAfWLBeku5tpPE2fOPLi+WHffIWbuh2tCjhyQhTBPMf5E9jDEH4FOmTYgYwbKwtQ==}
+    engines: {node: '>=18'}
+
+  globals@16.4.0:
+    resolution: {integrity: sha512-ob/2LcVVaVGCYN+r14cnwnoDPUufjiYgSqRhiFD0Q1iI4Odora5RE8Iv1D24hAz5oMophRGkGz+yuvQmmUMnMw==}
     engines: {node: '>=18'}
 
   gopd@1.2.0:
@@ -3160,6 +3170,8 @@ snapshots:
       path-is-absolute: 1.0.1
 
   globals@14.0.0: {}
+
+  globals@16.4.0: {}
 
   gopd@1.2.0: {}
 

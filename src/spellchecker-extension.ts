@@ -1,5 +1,4 @@
 import { Extension } from '@tiptap/core';
-import { Node } from 'prosemirror-model';
 import { Plugin, PluginKey } from 'prosemirror-state';
 import { DecorationSet } from 'prosemirror-view';
 import { IProofreaderInterface } from './i-proofreader-interface';
@@ -83,7 +82,7 @@ export const SpellcheckerExtension = Extension.create<ISpellcheckerOptions, ISpe
             // @ts-ignore
             return this.getState(state);
           },
-          handlePaste(view) {
+          handlePaste(_view) {
             that.storage.didPaste = true;
           },
           handleClick() {
@@ -101,7 +100,7 @@ export const SpellcheckerExtension = Extension.create<ISpellcheckerOptions, ISpe
 
             return spellchecker.getDecorationSet();
           },
-          apply(transaction, value, oldState, newState) {
+          apply(transaction, _value, _oldState, _newState) {
             const spellchecker = that.storage.spellchecker! as Spellchecker;
             if (transaction.getMeta(SPELLCHECKER_TRANSACTION)) {
               return spellchecker.getDecorationSet();
