@@ -10,7 +10,6 @@
   "scripts": {
     "test": "jest --config=jest.config.ts --coverage --passWithNoTests",
     "build": "tsc",
-    "format": "prettier --write \"src/**/*.ts\"",
     "lint": "eslint src/**/*.ts",
     "prepare": "pnpm run build"
   },
