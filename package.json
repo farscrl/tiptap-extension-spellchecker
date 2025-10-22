@@ -38,7 +38,7 @@
     "typescript": "^5.9.3"
   },
   "peerDependencies": {
-    "@tiptap/core": "^2.11.5"
+    "@tiptap/core": "^3.0.1"
   },
   "directories": {
     "lib": "lib"
