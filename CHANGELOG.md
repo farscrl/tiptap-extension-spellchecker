@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [2.0.1] - 2026-04-29
+- Switch build tooling to tsup, adding ESM output alongside CJS
+- Minor dependency updates
+
 ## [2.0.0] - 2025-10-22
 - Update to TipTap 3
 - Update dependencies
