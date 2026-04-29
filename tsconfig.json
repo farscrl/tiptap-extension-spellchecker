@@ -5,7 +5,8 @@
     "moduleResolution": "bundler",
     "lib": ["es2015", "dom"],
     "declaration": true,
-    "strict": true
+    "strict": true,
+    "ignoreDeprecations": "6.0"
   },
   "include": ["src"],
   "exclude": ["node_modules", "**/tests/*"]
