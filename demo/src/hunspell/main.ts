@@ -1,5 +1,5 @@
 import '../css.css';
-import { Hunspell, HunspellFactory, loadModule } from 'hunspell-asm';
+import { HunspellFactory, HunspellInstance, loadModule } from '@farscrl/hunspell-wasm';
 import {Editor} from '@tiptap/core';
 import StarterKit from '@tiptap/starter-kit';
 import SpellcheckerExtension from '@farscrl/tiptap-extension-spellchecker';
@@ -8,7 +8,7 @@ import {Proofreader} from './proofreader';
 let hunspellFactory: HunspellFactory;
 let affFile: string;
 let dictFile: string;
-let hunspell: Hunspell;
+let hunspell: HunspellInstance;
 
 async function loadDictionary() {
   hunspellFactory = await loadModule();

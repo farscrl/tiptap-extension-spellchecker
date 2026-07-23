@@ -43,3 +43,4 @@ testresults.log
 
 # Covers JetBrains IDEs
 .idea/
+/demo/dist/

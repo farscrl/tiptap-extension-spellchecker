@@ -25,6 +25,12 @@ module.exports = {
   resolve: {
     extensions: ['.ts', '.js']
   },
+  externals: {
+    // @farscrl/hunspell-wasm's compiled wasm glue guards a `require("node:module")`
+    // call behind a Node-only runtime check; it's never reached in the browser bundle,
+    // but webpack still needs telling not to try to resolve/bundle it.
+    'node:module': 'commonjs node:module'
+  },
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, 'dist')

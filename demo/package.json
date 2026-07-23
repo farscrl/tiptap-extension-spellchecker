@@ -22,10 +22,10 @@
     "webpack-dev-server": "^6.0.0"
   },
   "dependencies": {
+    "@farscrl/hunspell-wasm": "^1.0.0",
     "@farscrl/tiptap-extension-spellchecker": "link:..",
     "@tiptap/core": "^3.28.0",
     "@tiptap/pm": "^3.28.0",
-    "@tiptap/starter-kit": "^3.28.0",
-    "hunspell-asm": "^4.0.2"
+    "@tiptap/starter-kit": "^3.28.0"
   }
 }

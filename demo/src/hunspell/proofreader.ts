@@ -1,14 +1,14 @@
 import {IProofreaderInterface, ITextWithPosition} from '@farscrl/tiptap-extension-spellchecker';
-import {Hunspell} from 'hunspell-asm';
+import {HunspellInstance} from '@farscrl/hunspell-wasm';
 
 export interface WordList {
   [word: string]: number;
 }
 
 export class Proofreader implements IProofreaderInterface {
-  private hunspell: Hunspell;
+  private hunspell: HunspellInstance;
 
-  constructor(hunspell: Hunspell) {
+  constructor(hunspell: HunspellInstance) {
     this.hunspell = hunspell;
   }
 
