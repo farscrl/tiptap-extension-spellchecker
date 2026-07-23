@@ -1,6 +1,10 @@
 # Change Log
 All notable changes to this project will be documented in this file.
 
+## [2.0.2] - 2026-07-23
+- Update dependencies
+- Update demo dependencies
+
 ## [2.0.1] - 2026-04-29
 - Switch build tooling to tsup, adding ESM output alongside CJS
 - Minor dependency updates
